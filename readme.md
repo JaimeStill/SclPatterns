@@ -946,15 +946,15 @@ public interface ICliCommand
 
 </details>
 
+> [!IMPORTANT]
+> In the code block that follows, existing code has been redacted for brevity and to highlight the changes. See comments for details.
+
 <details open>
 <summary><h4><code>Cli/CliCommand.cs</code></h4></summary>
 
 To facilitate the configuration of configuration-based options, the `Action<CliConfig>? BuildConfigOptions` delegate is defined as a virtual property that can be overridden in sub-classes of `CliCommand`.
 
 The `CliConfig` instance is fed into the `Build` method, and passed to the call to `BuildConfigOptions` if it is not null. This instance is also passed to the `Build` command when intializing sub-commands.
-
-> [!IMPORTANT]
-> Existing code has been redacted for brevity and to highlight the changes. See comments for details.
 
 ```cs
 using System.CommandLine;
